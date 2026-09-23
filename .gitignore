@@ -22,3 +22,7 @@ dist/
 # OS
 .DS_Store
 Thumbs.db
+
+# Local test files
+backend/uploads/
+backend/test_production.xlsx
