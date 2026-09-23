@@ -1,4 +1,3 @@
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -18,7 +17,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "http://127.0.0.1:5173"
+        "http://127.0.0.1:5173",
+        "https://sih-26009-frontend.onrender.com"
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -39,6 +39,7 @@ app.include_router(
     simulation_router,
     prefix="/api/simulation"
 )
+
 app.include_router(
     ingestion_router,
     prefix="/api/ingestion"
